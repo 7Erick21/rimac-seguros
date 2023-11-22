@@ -1,0 +1,98 @@
+@import '@/styles/theme.scss';
+
+.view {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    @media screen and (min-width: $breakpoint-md) {
+        overflow: hidden;
+    }
+    &_body {
+        display: flex;
+        flex-direction: column;
+        margin-top: clamp(3.5rem, 3.32rem + 0.8vw, 4rem);
+        height: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            display: grid;
+            grid-template-columns: 408px 1fr;
+        }
+        &_sidebar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: $color-neutrals-n-100;
+            position: relative;
+            &_image_desktop {
+                position: absolute;
+                top: 15%;
+                left: 22%;
+            }
+        }
+        &_content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 48px clamp(2rem, -0.55rem + 11.3333vw, 6.25rem);
+            width: 100%;
+            @media screen and (min-width: $breakpoint-md) {
+                width: 60%;
+                margin: auto;
+                padding: 0;
+            }
+            &_data {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                @media screen and (min-width: $breakpoint-md) {
+                    gap: 16px;
+                }
+                &_title {
+                    color: $color-Gray_1_Ttulos;
+                    font-feature-settings:
+                        'clig' off,
+                        'liga' off;
+                    font-family: $font-primary;
+                    font-size: clamp(1.75rem, 1.57rem + 0.8vw, 2.25rem);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: clamp(2.25rem, 1.98rem + 1.2vw, 3rem);
+                    letter-spacing: -0.2px;
+                    &_red {
+                        color: $color-red-rimacr-500-cta;
+                    }
+                }
+                &_description {
+                    color: $color-Gray_2_Paragraph;
+                    font-family: $font-secondary;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 28px;
+                    &_weight {
+                        font-weight: 400;
+                    }
+                }
+            }
+            &_button {
+                @extend %button_styled;
+                max-width: 255px;
+                height: 56px;
+            }
+        }
+        &_copyright {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-top: 1px solid $color-neutrals-n400;
+            height: 75px;
+            padding-left: 32px;
+            color: $color-neutrals-n-500;
+            font-family: $font-secondary;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+        }
+    }
+}

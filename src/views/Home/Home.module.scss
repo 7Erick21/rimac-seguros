@@ -1,0 +1,497 @@
+@import '@/styles/theme.scss';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &_body {
+        display: flex;
+        flex-direction: column;
+        margin-top: clamp(3.5rem, 3.32rem + 0.8vw, 4rem);
+        @media screen and (min-width: $breakpoint-md) {
+            display: grid;
+            grid-template-columns: clamp(15.625rem, 8.125rem + 12.5vw, 18.75rem) 1fr;
+        }
+        &_content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 150px;
+            @media screen and (min-width: $breakpoint-md) {
+                display: grid;
+                grid-template-columns:
+                    minmax(
+                        calc(390px + clamp(1.25rem, -10.15rem + 19vw, 6rem)),
+                        1fr
+                    )
+                    minmax(224px, 1fr);
+                padding-top: clamp(2.5rem, 2.32rem + 0.8vw, 3rem);
+                padding-right: clamp(1.25rem, -10.15rem + 19vw, 6rem);
+                padding-bottom: clamp(2.5rem, 2.32rem + 0.8vw, 3rem);
+                gap: clamp(1.875rem, -7.575rem + 15.75vw, 5.8125rem);
+            }
+            &_user {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                &_back {
+                    display: flex;
+                    align-items: center;
+                    padding-left: clamp(1.25rem, -10.15rem + 19vw, 6rem);
+                    gap: 16px;
+                    cursor: pointer;
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                    &_icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 1px solid $color-red-rimacr-500-cta;
+                        svg {
+                            width: 12px;
+                            height: 12px;
+                            path {
+                                fill: $color-red-rimacr-500-cta;
+                            }
+                        }
+                    }
+                    &_text {
+                        color: $color-neutrals-n-500;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0.6px;
+                        text-transform: uppercase;
+                    }
+                }
+                &_data {
+                    display: flex;
+                    flex-direction: column;
+                    &_person {
+                        padding: clamp(2.5rem, 2.32rem + 0.8vw, 3rem)
+                            clamp(2rem, -0.6325rem + 11.7vw, 9.3125rem) 56px
+                            clamp(2rem, 0.56rem + 6.4vw, 6rem);
+                        background-color: $color-neutrals-n-100;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: clamp(1.5rem, 1.05rem + 2vw, 2.75rem);
+                        @media screen and (min-width: $breakpoint-md) {
+                            padding-left: clamp(
+                                1.25rem,
+                                -10.15rem + 19vw,
+                                6rem
+                            );
+                            background-color: $color-white;
+                            align-items: flex-start;
+                            padding-top: 0;
+                            padding-right: 0;
+                        }
+                        &_header {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            &_title {
+                                color: $color-Gray_1_Ttulos;
+                                font-feature-settings:
+                                    'clig' off,
+                                    'liga' off;
+                                font-family: $font-primary;
+                                font-size: 40px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 48px;
+                                letter-spacing: -0.6px;
+                                &_name {
+                                    color: $color-red-rimacr-500-cta;
+                                }
+                            }
+                            &_title_mobile {
+                                color: $color-Gray_1_Ttulos;
+                                font-feature-settings:
+                                    'clig' off,
+                                    'liga' off;
+                                font-family: $font-primary;
+                                font-size: 28px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 36px;
+                                letter-spacing: -0.6px;
+                            }
+                            &_description {
+                                color: $color-Gray_2_Paragraph;
+                                font-family: $font-secondary;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 28px;
+                            }
+                        }
+                        &_card {
+                            border-radius: 16px;
+                            box-shadow: 0px 0px 10px 0px
+                                rgba(163, 171, 204, 0.12);
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            height: clamp(9.25rem, 8.71rem + 2.4vw, 10.75rem);
+                            padding-left: clamp(1.5rem, 1.32rem + 0.8vw, 2rem);
+                            background-color: $color-white;
+                            position: relative;
+                            max-width: 300px;
+                            min-width: 300px;
+                            @media screen and (min-width: $breakpoint-md) {
+                                max-width: 400px;
+                                min-width: 390px;
+                                border: 3px solid $color-neutrals-n-200;
+                                box-shadow: none;
+                            }
+                            &_data {
+                                display: flex;
+                                flex-direction: column;
+                                max-width: 47%;
+                                min-width: 176px;
+                                &_plate {
+                                    color: $color-neutrals-n-500;
+                                    font-family: $font-secondary;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                    letter-spacing: 0.2px;
+                                }
+                                &_car {
+                                    color: $color-Gray_1_Ttulos;
+                                    font-feature-settings:
+                                        'clig' off,
+                                        'liga' off;
+                                    font-family: $font-primary;
+                                    font-size: clamp(
+                                        1rem,
+                                        0.91rem + 0.4vw,
+                                        1.25rem
+                                    );
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: clamp(
+                                        1.5rem,
+                                        1.41rem + 0.4vw,
+                                        1.75rem
+                                    );
+                                    word-spacing: 5px;
+                                    letter-spacing: 0.2px;
+                                    @media screen and (min-width: $breakpoint-md) {
+                                        letter-spacing: normal;
+                                    }
+                                }
+                            }
+                            &_image {
+                                position: absolute;
+                                bottom: 0;
+                                right: clamp(0.625rem, 0.4rem + 1vw, 1.25rem);
+                                width: clamp(5rem, 4.37rem + 2.8vw, 6.75rem);
+                                height: clamp(
+                                    9.75rem,
+                                    9.2325rem + 2.3vw,
+                                    11.1875rem
+                                );
+                            }
+                        }
+                    }
+                    &_price {
+                        padding: 44px
+                            clamp(2rem, -0.6325rem + 11.7vw, 9.3125rem)
+                            clamp(0rem, -0.9675rem + 4.3vw, 2.6875rem) 0;
+                        margin-left: clamp(2rem, 0.56rem + 6.4vw, 6rem);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: clamp(1rem, 0.37rem + 2.8vw, 2.75rem);
+                        @media screen and (min-width: $breakpoint-md) {
+                            margin-left: clamp(1.25rem, -10.15rem + 19vw, 6rem);
+                            padding-right: 0;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            padding-top: 0;
+                            justify-content: space-between;
+                            gap: clamp(0rem, -0.9675rem + 4.3vw, 2.6875rem);
+                            border-bottom: 1px solid $color-neutrals-n400;
+                            flex-wrap: wrap;
+                        }
+                        &_content {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                            &_title {
+                                color: $color-Gray_1_Ttulos;
+                                font-feature-settings:
+                                    'clig' off,
+                                    'liga' off;
+                                font-family: $font-primary;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 24px;
+                                letter-spacing: 0.2px;
+                            }
+                            &_range {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                flex-wrap: wrap;
+                                @media screen and (min-width: $breakpoint-md) {
+                                    gap: 8px;
+                                }
+                                &_min,
+                                &_max {
+                                    color: $color-Gray_2_Paragraph;
+                                    font-feature-settings:
+                                        'clig' off,
+                                        'liga' off;
+                                    font-family: $font-primary;
+                                    font-size: 12px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 16px;
+                                    letter-spacing: 0.6px;
+                                    text-transform: uppercase;
+                                }
+                                &_line {
+                                    width: 1px;
+                                    height: 16px;
+                                    background-color: $color-neutrals-n400;
+                                }
+                            }
+                        }
+                        &_input {
+                            width: 100%;
+                            max-width: 200px;
+                            display: flex;
+                            align-items: center;
+                            padding: 16px;
+                            justify-content: space-between;
+                            gap: 16px;
+                            border-radius: 4px;
+                            height: fit-content;
+                            border: 1px solid $color-Gray_4;
+                            @media screen and (min-width: $breakpoint-md) {
+                                max-width: 165px;
+                            }
+                            &_subtract,
+                            &_add {
+                                cursor: pointer;
+                                width: 16px;
+                                height: 16px;
+                                &:hover {
+                                    opacity: 0.5;
+                                }
+                            }
+                            &_value {
+                                color: $color-Gray_1_Ttulos;
+                                text-align: center;
+                                font-feature-settings:
+                                    'clig' off,
+                                    'liga' off;
+                                font-family: $font-primary;
+                                font-size: 16px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 24px;
+                                letter-spacing: 0.2px;
+                                cursor: text;
+                                border: none;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                &_tab {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    @media screen and (min-width: $breakpoint-md) {
+                        padding-left: clamp(1.25rem, -10.15rem + 19vw, 6rem);
+                        gap: 32px;
+                    }
+                    &_title {
+                        padding-left: clamp(1.25rem, -10.15rem + 19vw, 6rem);
+                        color: $color-Gray_1_Ttulos;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                        @media screen and (min-width: $breakpoint-md) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            &_total {
+                display: flex;
+                flex-direction: column;
+                min-width: 224px;
+                width: fit-content;
+                &_head {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $color-neutrals-n400;
+                    &_text {
+                        color: $color-Gray_1_Ttulos;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 0.6px;
+                        text-transform: uppercase;
+                    }
+                    &_amount {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+                        &_total {
+                            color: $color-Gray_1_Ttulos;
+                            font-feature-settings:
+                                'clig' off,
+                                'liga' off;
+                            font-family: $font-primary;
+                            font-size: 28px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 36px;
+                            letter-spacing: -0.2px;
+                        }
+                        &_text {
+                            color: $color-Gray_2_Paragraph;
+                            font-family: $font-secondary;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                            letter-spacing: 0.2px;
+                        }
+                    }
+                }
+                &_body {
+                    padding-top: 24px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    &_content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        &_title {
+                            color: $color-Gray_1_Ttulos;
+                            font-feature-settings:
+                                'clig' off,
+                                'liga' off;
+                            font-family: $font-primary;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            letter-spacing: 0.2px;
+                        }
+                        &_options {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            &_option {
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                &_icon {
+                                    width: 16px;
+                                    height: 16px;
+                                    svg {
+                                        width: 16px;
+                                        height: 16px;
+                                        path {
+                                            fill: $color-atom_checkbox_solid;
+                                        }
+                                    }
+                                }
+                                &_item {
+                                    color: $color-Gray_2_Paragraph;
+                                    font-family: $font-secondary;
+                                    font-size: 14px;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    }
+                    &_button {
+                        @extend %button_styled;
+                    }
+                }
+            }
+            &_total_mobile {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                box-shadow: 0px 6px 32px 0px rgba(174, 172, 243, 0.45);
+                padding: 16px 32px;
+                justify-content: space-between;
+                background-color: $color-white;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                &_content {
+                    display: flex;
+                    flex-direction: column;
+                    &_amount {
+                        color: $color-Gray_1_Ttulos;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 32px;
+                        letter-spacing: -0.2px;
+                    }
+                    &_text {
+                        color: $color-Gray_1_Ttulos;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 0.8px;
+                        text-transform: uppercase;
+                    }
+                }
+                &_button {
+                    @extend %button_styled;
+                }
+            }
+        }
+    }
+}

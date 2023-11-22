@@ -1,0 +1,127 @@
+@import '@/styles/theme.scss';
+
+%input_contain {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.body_form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: clamp(2rem, 1.82rem + 0.8vw, 2.5rem);
+    padding: clamp(2.5rem, 0.16rem + 10.4vw, 9rem)
+        clamp(2rem, -4.3rem + 28vw, 19.5rem) 40px
+        clamp(2rem, 0.02rem + 8.8vw, 7.5rem);
+    @media screen and (min-width: $breakpoint-md) {
+        padding-left: clamp(2rem, -2.32rem + 19.2vw, 14rem);
+        padding-right: clamp(6.25rem, -25.55rem + 53vw, 19.5rem);
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+        min-width: 288px;
+        max-width: 500px;
+        &_data {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            width: 100%;
+            &_label {
+                color: $color-Gray_1_Ttulos;
+                font-feature-settings:
+                    'clig' off,
+                    'liga' off;
+                font-family: $font-primary;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 36px;
+                letter-spacing: -0.2px;
+            }
+            &_inputs {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                &_content {
+                    @extend %input_contain;
+                    &_document {
+                        display: flex;
+                        align-items: center;
+                        border: 1px solid $color-Gray_4;
+                        border-radius: 4px;
+                        &_select {
+                            width: 150px;
+                        }
+                        &_line {
+                            height: 100%;
+                            width: 1px;
+                            background-color: $color-Gray_4;
+                            z-index: 9;
+                        }
+                    }
+                }
+                &_phone {
+                    @extend %input_contain;
+                }
+                &_plate {
+                    @extend %input_contain;
+                }
+            }
+        }
+        &_policy {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            &_checkbox {
+                width: 20px;
+                height: 20px;
+            }
+            &_text {
+                color: $color-Gray_2_Paragraph;
+                font-family: $font-secondary;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px;
+                letter-spacing: 0.2px;
+                &_weight {
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    &_button {
+        padding: 20px 32px;
+        border: 0px;
+        border-radius: 6px;
+        background-color: $color-red-rimacr-500-cta;
+        color: $color-white;
+        font-feature-settings:
+            'clig' off,
+            'liga' off;
+        font-family: $font-primary;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        width: 100%;
+        max-width: 255px;
+        cursor: pointer;
+        &:disabled {
+            opacity: 0.5;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            width: 192px;
+        }
+    }
+}

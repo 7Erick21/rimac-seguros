@@ -1,0 +1,84 @@
+@import '@/styles/theme.scss';
+
+.sidebar {
+    background-color: $color-neutrals-n-100;
+    padding: 52px 0 56px 56px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_stepper {
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+        &_step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            &:first-child {
+                .sidebar_stepper_step_number:before {
+                    content: '';
+                    position: absolute;
+                    width: 0px;
+                    border: 1px dashed $color-neutrals-n400;
+                    height: 180%;
+                    right: 50%;
+                    left: 50%;
+                    top: 100%;
+                }
+            }
+            &_number {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                border: 1px solid $color-Gray_4;
+                border-radius: 50%;
+                align-items: center;
+                justify-content: center;
+                color: $color-Gray_4;
+                text-align: center;
+                font-feature-settings:
+                    'clig' off,
+                    'liga' off;
+                font-family: $font-primary;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 16px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                position: relative;
+                transition-property: color, background-color, border;
+                transition-duration: 3s;
+                transition-timing-function: ease-in-out;
+            }
+            &_item {
+                color: $color-neutrals-n-500;
+                font-feature-settings:
+                    'clig' off,
+                    'liga' off;
+                font-family: $font-primary;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0.2px;
+                transition: color 3s ease-in-out;
+            }
+        }
+        &_step_active {
+            .sidebar_stepper_step_number {
+                border: 1px solid transparent;
+                background-color: $color-acian_2_hover;
+                color: $color-white;
+                transition-property: color, background-color, border;
+                transition-duration: 3s;
+                transition-timing-function: ease-in-out;
+            }
+            .sidebar_stepper_step_item {
+                color: $color-Gray_1_Ttulos;
+                transition: color 3s ease-in-out;
+            }
+        }
+    }
+}

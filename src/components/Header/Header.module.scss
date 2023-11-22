@@ -1,0 +1,60 @@
+@import '@/styles/theme.scss';
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: $color-neutrals-n-100;
+    align-items: center;
+    padding: clamp(1rem, 0.91rem + 0.4vw, 1.25rem)
+        clamp(2rem, 0.02rem + 8.8vw, 7.5rem);
+    position: fixed;
+    z-index: 9;
+    @media screen and (min-width: $breakpoint-md) {
+        background-color: transparent;
+    }
+    &_logo {
+        width: clamp(5.75rem, 5.5925rem + 0.7vw, 6.1875rem);
+        height: 16px;
+    }
+    &_contact {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        &_doubt {
+            color: $color-Gray_2_Paragraph;
+            font-family: $font-secondary;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: 0.2px;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+        &_phone {
+            display: flex;
+            gap: 1px;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.5;
+            }
+            &_text {
+                color: $color-blue-berry-b-500;
+                font-family: $font-secondary;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+.header_outline {
+    border-bottom: 1px solid $color-neutrals-n400;
+    background-color: $color-white;
+}

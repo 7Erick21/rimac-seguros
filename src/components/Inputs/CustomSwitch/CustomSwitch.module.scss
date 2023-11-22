@@ -1,0 +1,33 @@
+@import '@/styles/theme.scss';
+
+.switch {
+    display: inline-block;
+    cursor: pointer;
+    &_track {
+        width: 51px;
+        height: 31px;
+        background-color: #ccc;
+        border-radius: 15px;
+        position: relative;
+        transition: background-color 0.3s ease;
+        &_thumb {
+            width: 26px;
+            height: 26px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(10%, -50%);
+            transition: transform 0.3s ease;
+        }
+    }
+}
+
+.switch_checked {
+    .switch_track {
+        background-color: #4caf50;
+        &_thumb {
+            transform: translate(85%, -50%);
+        }
+    }
+}

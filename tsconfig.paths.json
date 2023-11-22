@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/models/*": ["src/api/models/*"],
+            "@/services/*": ["src/api/services/*"],
+
+            "@/assets/*": ["src/assets/*"],
+
+            "@/components/*": ["src/components/*"],
+
+            "@/routes/*": ["src/routes/*"],
+            "@/zustand/*": ["src/zustand/*"],
+            "@/views/*": ["src/views/*"],
+
+            "@/constants/*": ["src/toolbox/constants/*"],
+            "@/enums/*": ["src/toolbox/enums/*"],
+            "@/icons/*": ["src/toolbox/assets/icons/*"],
+            "@/images/*": ["src/toolbox/assets/images/*"],
+            "@/hooks/*": ["src/toolbox/hooks/*"],
+            "@/styles/*": ["src/toolbox/styles/*"],
+            "@/interfaces/*": ["src/toolbox/interfaces/*"],
+            "@/helpers/*": ["src/toolbox/helpers/*"],
+            "@/toolbox/*": ["src/toolbox/*"]
+        }
+    }
+}

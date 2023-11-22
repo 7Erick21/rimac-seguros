@@ -1,0 +1,153 @@
+@import '@/styles/theme.scss';
+
+.card {
+    display: flex;
+    flex-direction: column;
+    &_item {
+        display: grid;
+        grid-template-columns: clamp(2.5rem, 2.32rem + 0.8vw, 3rem) 1fr;
+        padding: 32px 32px;
+        border-bottom: 1px solid $color-neutrals-n400;
+        gap: clamp(1rem, 0.82rem + 0.8vw, 1.5rem);
+        &_image {
+            svg {
+                width: clamp(2.5rem, 2.32rem + 0.8vw, 3rem);
+                height: clamp(2.5rem, 2.32rem + 0.8vw, 3rem);
+            }
+        }
+        &_body {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            &_content {
+                display: flex;
+                flex-direction: column;
+                gap: clamp(0.5rem, 0.32rem + 0.8vw, 1rem);
+                &_head {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    gap: 32px;
+                    &_title {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 12px;
+                        color: $color-Gray_1_Ttulos;
+                        font-feature-settings:
+                            'clig' off,
+                            'liga' off;
+                        font-family: $font-primary;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0.2px;
+                        &_hide {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            cursor: pointer;
+                            &:hover {
+                                opacity: 0.5;
+                            }
+                            &_icon {
+                                border-radius: 50%;
+                                border: 1px solid $color-acian-1;
+                                width: 24px;
+                                height: 24px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                svg {
+                                    width: 20px;
+                                    height: 20px;
+                                }
+                            }
+                            &_text {
+                                color: $color-acian_2_hover;
+                                font-feature-settings:
+                                    'clig' off,
+                                    'liga' off;
+                                font-family: $font-primary;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: 16px;
+                                letter-spacing: 0.6px;
+                                text-transform: uppercase;
+                            }
+                        }
+                        &_hide_disabled {
+                            cursor: default;
+                            opacity: 0.5;
+                        }
+                    }
+                    &_hide {
+                        width: 20px;
+                        height: 20px;
+                        cursor: pointer;
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                        path {
+                            fill: $color-red-rimacr-500-cta;
+                        }
+                    }
+                }
+                &_description {
+                    color: $color-Gray_2_Paragraph;
+                    font-family: $font-secondary;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    height: 220px;
+                    transition: height 500ms ease-in-out;
+                    overflow: hidden;
+                }
+                &_description_hide {
+                    height: 0px;
+                    transition: height 500ms ease-in-out;
+                }
+            }
+            &_hide {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                &_text {
+                    color: $color-neutrals-n-500;
+                    font-feature-settings:
+                        'clig' off,
+                        'liga' off;
+                    font-family: $font-primary;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 16px;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                    transition: color 500ms ease-in-out;
+                }
+                svg {
+                    path {
+                        fill: $color-neutrals-n-500;
+                        transition: fill 500ms ease-in-out;
+                    }
+                }
+            }
+            &_hide_true {
+                .card_item_body_hide_text {
+                    color: $color-acian_2_hover;
+                    transition: color 500ms ease-in-out;
+                }
+                svg {
+                    path {
+                        fill: $color-acian_2_hover;
+                        transition: fill 500ms ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

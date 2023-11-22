@@ -1,0 +1,1 @@
+export { CaseThanks } from './CaseThanks'

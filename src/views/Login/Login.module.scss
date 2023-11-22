@@ -1,0 +1,17 @@
+@import '@/styles/theme.scss';
+
+.login {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    &_body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @media screen and (min-width: $breakpoint-md) {
+            display: grid;
+            grid-template-columns: 39.4118% 60.5883%;
+        }
+    }
+}
