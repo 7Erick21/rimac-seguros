@@ -7,6 +7,7 @@ import {
 
 import { ROUTE_CASE_THANKS, ROUTE_HOME, ROUTE_LOGIN } from '@/constants/route'
 import { CaseThanks } from '@/views/CaseThanks'
+import { ErrorPage } from '@/views/ErrorPage'
 import { Home } from '@/views/Home'
 import { Login } from '@/views/Login'
 
@@ -17,7 +18,7 @@ export const allRoutes = createBrowserRouter(
         <Route
             path={ROUTE_LOGIN}
             element={<Outlet />}
-            errorElement={<div>fdfsf</div>}
+            errorElement={<ErrorPage />}
         >
             <Route index element={<Login />} />
             <Route
