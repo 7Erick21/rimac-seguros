@@ -11,7 +11,7 @@ const queryClient = new QueryClient()
 const App = () => {
     return (
         <QueryClientProvider client={queryClient}>
-            <Helmet async>
+            <Helmet>
                 <meta
                     property='og:title'
                     content='R10 Score - Resultados en vivo'
