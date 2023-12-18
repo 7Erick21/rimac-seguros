@@ -1,4 +1,4 @@
-import { Helmet, HelmetData, HelmetProvider } from 'react-helmet-async'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { RouterProvider } from 'react-router-dom'
 
@@ -6,13 +6,13 @@ import { allRoutes } from './routes/AllRoutes'
 
 const queryClient = new QueryClient()
 
-const helmetData = new HelmetData({})
+// const helmetData = new HelmetData({})
 
 const App = () => {
     return (
         <HelmetProvider context={{}}>
             <QueryClientProvider client={queryClient}>
-                <Helmet helmetData={helmetData}>
+                <Helmet>
                     <meta
                         property='og:title'
                         content='R10 Score - Resultados en vivo'
