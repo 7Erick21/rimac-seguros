@@ -24,7 +24,7 @@ const App = () => {
                     />
                     <meta
                         property='og:image'
-                        content={`${'https://erick-rimac-seguros.vercel.app/'}/r10.webp`}
+                        content={`${'https://erick-rimac-seguros.vercel.app'}/r10.webp`}
                     />
                     <meta property='og:image:type' content='image/webp' />
                     <meta property='og:image:width' content='600' />
@@ -36,7 +36,7 @@ const App = () => {
                     <meta property='og:site_name' content='R10 Score' />
                     <meta
                         property='og:image:secure_url'
-                        content={`${'https://erick-rimac-seguros.vercel.app/'}/r10.webp`}
+                        content={`${'https://erick-rimac-seguros.vercel.app'}/r10.webp`}
                     />
                     <meta property='og:locale' content='es' />
                 </Helmet>
