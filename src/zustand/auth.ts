@@ -1,6 +1,6 @@
-import { create } from 'zustand'
 
 import { IAuthState } from '@/interfaces/auth'
+import { create } from 'zustand'
 
 export const useAuth = create<IAuthState>((set) => ({
     numberDocument: '',
