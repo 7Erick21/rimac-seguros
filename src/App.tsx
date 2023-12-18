@@ -10,7 +10,7 @@ const helmetData = new HelmetData({})
 
 const App = () => {
     return (
-        <HelmetProvider>
+        <HelmetProvider context={{}}>
             <QueryClientProvider client={queryClient}>
                 <Helmet helmetData={helmetData}>
                     <meta
