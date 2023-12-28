@@ -5,11 +5,17 @@ import {
     Route,
 } from 'react-router-dom'
 
-import { ROUTE_CASE_THANKS, ROUTE_HOME, ROUTE_LOGIN } from '@/constants/route'
+import {
+    ROUTE_CASE_THANKS,
+    ROUTE_HOME,
+    ROUTE_LOGIN,
+    ROUTE_PAYMENT,
+} from '@/constants/route'
 import { CaseThanks } from '@/views/CaseThanks'
 import { ErrorPage } from '@/views/ErrorPage'
 import { Home } from '@/views/Home'
 import { Login } from '@/views/Login'
+import { Payment } from '@/views/Payment'
 
 import { PrivateRoute } from './PrivateRoute'
 
@@ -34,6 +40,14 @@ export const allRoutes = createBrowserRouter(
                 element={
                     <PrivateRoute>
                         <CaseThanks />
+                    </PrivateRoute>
+                }
+            />
+            <Route
+                path={ROUTE_PAYMENT}
+                element={
+                    <PrivateRoute>
+                        <Payment />
                     </PrivateRoute>
                 }
             />
