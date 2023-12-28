@@ -43,14 +43,7 @@ export const allRoutes = createBrowserRouter(
                     </PrivateRoute>
                 }
             />
-            <Route
-                path={ROUTE_PAYMENT}
-                element={
-                    <PrivateRoute>
-                        <Payment />
-                    </PrivateRoute>
-                }
-            />
+            <Route path={ROUTE_PAYMENT} element={<Payment />} />
         </Route>,
     ),
 )
